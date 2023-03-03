@@ -1,0 +1,142 @@
+header
+{
+    background-image: url("../img/menu_background.png");
+    height: 550px;
+    width: 1440px;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+h2 
+{
+    font-family: 'Oxygen', serif;
+    font-size: 20px;
+}
+
+.menu__p 
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+}
+
+.menu__nav
+{
+    font-family: 'Oxygen', serif;
+    font-size: 20px;
+}
+
+.menu__a{
+    color: white;
+}
+
+.menu__h1 
+{
+    font-family: 'Lora', serif;
+    font-size: 51px;
+}
+
+.menu__span
+{
+    font-family: 'Oxygen', serif;
+    font-size: 20px;
+}
+
+.menu__button
+{
+    font-family: 'Oxygen', serif;
+    font-size: 20px;
+}
+
+.categories 
+{
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+
+.featuredPost1
+{
+    background-image: url("../img/posts/featuredPost1.png");
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 460px;
+    color: white;
+}
+
+.featuredPost2
+{
+    background-image: url("../img/posts/featuredPost2.png");
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 460px;
+    color: white;
+}
+
+.featuredPosts__a 
+{
+    font-family: 'Lora', serif;
+    font-size: 30px;
+    color: white;  
+}
+
+.featuredPosts__p
+{
+    font-family: 'Oxygen', serif;
+    font-size: 25px;
+    opacity: .7;
+}
+
+.featuredPosts__span
+{
+    font-family: 'Oxygen', serif;
+    font-size: 35px;
+    opacity: .7;
+}
+
+.mostRecentPost__a
+{
+    font-family: 'Lora', serif;
+    font-size: 21px;
+    color: black;
+}
+
+.mostRecentPost__p
+{
+    font-family: 'Oxygen', serif;
+    font-size: 19px;
+    color: #7A7A7A;
+}
+
+.mostRecentPost__span
+{
+    font-family: 'Oxygen', serif;
+    font-size: 35px;
+    color: #999999;
+}
+
+footer
+{
+    background-image: url("../img/footer.png");
+    height: 89px;
+    width: 1440px;
+    color: white;
+}
+
+.footer__p
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+}
+
+.footer__a
+{
+    font-family: 'Oxygen', serif;
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+    opacity: .6;
+}

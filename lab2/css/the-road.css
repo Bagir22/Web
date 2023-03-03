@@ -1,0 +1,53 @@
+a
+{
+    text-decoration: none;
+}
+
+.menu__p 
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+    color: #2E2E2E;
+}
+
+.menu__nav
+{
+    font-family: 'Oxygen', serif;
+    font-size: 20px;
+}
+
+.menu__h1 
+{
+    font-family: 'Lora', serif;
+    font-size: 51px;
+}
+
+p
+{
+    font-family: 'Oxygen', serif;
+    font-size: 35px;
+    color: #101315;
+}
+
+footer
+{
+    background-image: url("../img/footer.png");
+    height: 89px;
+    width: 1440px;
+    color: white;
+}
+
+.footer__p
+{
+    font-family: 'Lora', serif;
+    font-size: 26px;
+}
+
+.footer__a
+{
+    font-family: 'Oxygen', serif;
+    font-size: 26px;
+    text-decoration: none;
+    color: white;
+    opacity: .6;
+}
