@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Index</title>
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/header.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
@@ -14,98 +15,101 @@
             <div class="menu">
                 <p class="menu__p">Escape</p>
                 <nav class="menu__nav">
-                    <a class="menu__a" href="">HOME</a>
-                    <a class="menu__a" href="">CATEGORIES</a>
-                    <a class="menu__a" href="">ABOUT</a>
-                    <a class="menu__a" href="">CONTACT</a>
+                    <a class="menu__a" href="#">Home</a>
+                    <a class="menu__a" href="#">Categories</a>
+                    <a class="menu__a" href="#">About</a>
+                    <a class="menu__a" href="#">Contact</a>
                 </nav>
                 <h1 class="menu__h1">Let's do it together</h1>
                 <span class="menu__span">We travel the world in search of stories. Come along for the ride.</span>
                 <button class="menu__button" type="button">View Latest Posts</button>
                 <nav class="menu__nav">
-                    <a  class="menu__a categories" href="">Nature</a>
-                    <a  class="menu__a categories" href="">Photography</a>
-                    <a  class="menu__a categories" href="">Relaxation</a>
-                    <a  class="menu__a categories" href="">Vacation</a>
-                    <a  class="menu__a categories" href="">Travel</a>
-                    <a  class="menu__a categories" href="">Adventure</a>
+                    <a  class="menu__a" href="#">Nature</a>
+                    <a  class="menu__a" href="#">Photography</a>
+                    <a  class="menu__a" href="#">Relaxation</a>
+                    <a  class="menu__a" href="#">Vacation</a>
+                    <a  class="menu__a" href="#">Travel</a>
+                    <a  class="menu__a" href="#">Adventure</a>
                 </nav>
             </div>
         </header>
-        <div class="featuredPosts">
-            <h2 class="featuredPosts__h2">Featured Posts</h2>
-            <div class="featuredPost1">
-                <a class="featuredPosts__a" href="the-road-ahead.html">The Road Ahead</a>
-                <p class="featuredPosts__p">The road ahead might be paved - it might not be.</p>
-                <span class="featuredPosts__span">Mat Vogels</span>
-                <span class="featuredPosts__span">September 25, 2015</span>
+        <!-- По бэм: dont use tags in class names, _ mofidier - sostavnoe name  -->
+        <div class="featured_posts">
+            <h2 class="featured_posts__h2">Featured Posts</h2>
+            <div class="featured_post1">
+                <a class="featured_posts__a" href="the-road-ahead.html">The Road Ahead</a>
+                <p class="featured_posts__p">The road ahead might be paved - it might not be.</p>
+                <img src="../lab2/img/av/av1.png" alt="#">
+                <span class="featured_posts__span">Mat Vogels</span>
+                <span class="featured_posts__span">September 25, 2015</span>
             </div>
-            <div class="featuredPost2">
-                <a class="featuredPosts__a" href="#">From Top Down</a>
-                <p class="featuredPosts__p">Once a year, go someplace you've never been before.</p>
-                <span class="featuredPosts__span">William Wong</span>
-                <span class="featuredPosts__span">September 25, 2015</span>
+            <div class="featured_post2">
+                <a class="featured_posts__a" href="#">From Top Down</a>
+                <p class="featured_posts__p">Once a year, go someplace you've never been before.</p>
+                <img src="../lab2/img/av/av2.png" alt="#">
+                <span class="featured_posts__span">William Wong</span>
+                <span class="featured_posts__span">September 25, 2015</span>
             </div>
         </div> 
-        <div class="mostRecent">
-            <h2>Most Recent</h2>
-            <div class="mostRecentPost">
+        <div class="most_recent">
+            <h2 class="most_recent__h2">Most Recent</h2>
+            <div class="most_recent_post">
                 <img src = "img/posts/post1.jpg" alt="#">
-                <a class="mostRecentPost__a" href="#">Still Standing Tall</a>
-                <p class="mostRecentPost__p">Life begins at the end of your comfort zone.</p>
-                <img src = "img/av/av2.jpg" alt="#">
-                <span class="mostRecentPost__span">William Wong</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Still Standing Tall</a>
+                <p class="most_recent_post__p">Life begins at the end of your comfort zone.</p>
+                <img src = "img/av/av2.png" alt="#">
+                <span class="most_recent_post__span">William Wong</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
-            <div class="mostRecentPost">
+            <div class="most_recent_post">
                 <img src = "img/posts/post2.png" alt="#">
-                <a class="mostRecentPost__a" href="#">Sunny Side Up</a>
-                <p class="mostRecentPost__p">No place is ever as bad as they tell you it`s going to be.</p>
-                <img src = "img/av/av1.jpg" alt="#">
-                <span class="mostRecentPost__span">Mat Vogels</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Sunny Side Up</a>
+                <p class="most_recent_post__p">No place is ever as bad as they tell you it`s going to be.</p>
+                <img src = "img/av/av1.png" alt="#">
+                <span class="most_recent_post__span">Mat Vogels</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
-            <div class="mostRecentPost">
+            <div class="most_recent_post">
                 <img src = "img/posts/post3.png" alt="#">
-                <a class="mostRecentPost__a" href="#">Water Falls</a>
-                <p class="mostRecentPost__p">We travel not to escape life, but for life not to escape us.</p>
-                <img src = "img/av/av1.jpg" alt="#">
-                <span class="mostRecentPost__span">Mat Vogels</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Water Falls</a>
+                <p class="most_recent_post__p">We travel not to escape life, but for life not to escape us.</p>
+                <img src = "img/av/av1.png" alt="#">
+                <span class="most_recent_post__span">Mat Vogels</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
-            <div class="mostRecentPost">
+            <div class="most_recent_post">
                 <img src = "img/posts/post4.png" alt="#">
-                <a class="mostRecentPost__a" href="#">Through the Mist</a>
-                <p class="mostRecentPost__p">Travel makes you see what a tiny place you occupy in the world.</p>
-                <img src = "img/av/av2.jpg" alt="#">
-                <span class="mostRecentPost__span">William Wong</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Through the Mist</a>
+                <p class="most_recent_post__p">Travel makes you see what a tiny place you occupy in the world.</p>
+                <img src = "img/av/av2.png" alt="#">
+                <span class="most_recent_post__span">William Wong</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
-            <div class="mostRecentPost">
+            <div class="most_recent_post">
                 <img src = "img/posts/post5.png" alt="#">
-                <a class="mostRecentPost__a" href="#">Awaken Early</a>
-                <p class="mostRecentPost__p">Not all those who wander are lost.</p>
-                <img src = "img/av/av1.jpg" alt="#">
-                <span class="mostRecentPost__span">Mat Vogels</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Awaken Early</a>
+                <p class="most_recent_post__p">Not all those who wander are lost.</p>
+                <img src = "img/av/av1.png" alt="#">
+                <span class="most_recent_post__span">Mat Vogels</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
-            <div class="mostRecentPost">
+            <div class="most_recent_post">
                 <img src = "img/posts/post6.png" alt="#">
-                <a class="mostRecentPost__a" href="#">Try it Always</a>
-                <p class="mostRecentPost__p">The world is a book, and those who do not travel read only one page.</p>
-                <img src = "img/av/av1.jpg" alt="#">
-                <span class="mostRecentPost__span">Mat Vogels</span>
-                <span class="mostRecentPost__span">9/25/2015</span>
+                <a class="most_recent_post__a" href="#">Try it Always</a>
+                <p class="most_recent_post__p">The world is a book, and those who do not travel read only one page.</p>
+                <img src = "img/av/av1.png" alt="#">
+                <span class="most_recent_post__span">Mat Vogels</span>
+                <span class="most_recent_post__span">9/25/2015</span>
             </div>
         </div>      
         <footer>
             <div class="footer">
                 <p class="footer__p">Escape</p>
                 <nav class="footer__nav">
-                    <a class="footer__a" href="">HOME</a>
-                    <a class="footer__a" href="">CATEGORIES</a>
-                    <a class="footer__a" href="">ABOUT</a>
-                    <a class="footer__a" href="">CONTACT</a>
+                    <a class="footer__a" href="#">Home</a>
+                    <a class="footer__a" href="#">Categories</a>
+                    <a class="footer__a" href="#">About</a>
+                    <a class="footer__a" href="#">Contact</a>
                 </nav>
             </div>
         </footer>

@@ -1,31 +1,59 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
 a
 {
     text-decoration: none;
+    color: #2E2E2E;
 }
 
-.menu__p 
+.menu__p_name 
 {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', normal;
+    font-weight: 400;
     font-size: 26px;
+    line-height: 26px;
     color: #2E2E2E;
 }
 
 .menu__nav
 {
-    font-family: 'Oxygen', serif;
-    font-size: 20px;
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
 }
 
 .menu__h1 
 {
-    font-family: 'Lora', serif;
-    font-size: 51px;
+    font-family: 'Lora', normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 51px;
+    text-align: center;
+    letter-spacing: 2px;
 }
 
-p
+.menu__p_text
 {
-    font-family: 'Oxygen', serif;
-    font-size: 35px;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+}
+.text__p
+{
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 35px;
     color: #101315;
 }
 
@@ -39,15 +67,22 @@ footer
 
 .footer__p
 {
-    font-family: 'Lora', serif;
+    font-family: 'Lora', normal;
+    font-weight: 400;
     font-size: 26px;
+    line-height: 26px;
+    color: #FFFFFF;
 }
 
 .footer__a
 {
-    font-family: 'Oxygen', serif;
-    font-size: 26px;
-    text-decoration: none;
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: white;
     opacity: .6;
 }
