@@ -1,52 +1,61 @@
-body
-{
+* {
     margin: 0;
     padding: 0;
 }
 
-a
-{
-    text-decoration: none;
+.header__navbar {
+    padding: 3px 0 11px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.header__title {
+    font: normal 400 26px/26px 'Lora', serif;
+    margin-top: 13px;
     color: #2E2E2E;
 }
 
-.menu__p_name 
-{
-    font-family: 'Lora', normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
-    color: #2E2E2E;
+.header__nav {
+    padding: 10px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
 }
 
-.menu__nav
-{
-    font-family: 'Oxygen', normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 20px;
+.header__link {
+    padding: 10px 20px;
+    font: normal 400 12px/20px 'Oxygen', serif;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+    color: #2E2E2E;
+    text-decoration: none;
 }
 
-.menu__h1 
-{
-    font-family: 'Lora', normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 51px;
-    text-align: center;
-    letter-spacing: 2px;
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 159px;
+}
+.intro__title{
+    font: normal 400 50px/51px 'Lora, serif';
+    padding: 82px 0 0 0;
+    color: #2E2E2E;
 }
 
-.menu__p_text
-{
-    font-family: 'Oxygen';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    text-align: center;
+.intro__text{
+    margin: 20px 0 113px 0 ;
+    color: #2E2E2E;
+    opacity: 0.63;
+}
+.post__image{
+    width: 100%;
+}
+
+.text {
+    padding: 140px 240px 135px 240px;
 }
 .text__p
 {
@@ -57,32 +66,102 @@ a
     color: #101315;
 }
 
-footer
-{
-    background-image: url("../img/footer.png");
-    height: 89px;
-    width: 1440px;
-    color: white;
+.footer {
+    height: 378px;
+    background: url("../img/footer_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.footer__p
-{
-    font-family: 'Lora', normal;
-    font-weight: 400;
-    font-size: 26px;
-    line-height: 26px;
+.footer__navbar {
+    padding: 28px 0 27px 0;
+    background: #232F38;
+    opacity: 0.6;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.footer__container {
+    height: 34px;
+}
+
+.footer__title {
+    font: normal 400 26px/26px 'Lora', serif;
     color: #FFFFFF;
 }
 
-.footer__a
-{
-    font-family: 'Oxygen', normal;
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 26px;
+.footer__nav {
+    padding: 3px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer__link {
+    font: normal 400 11px/26px 'Oxygen', serif;
     text-align: right;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: white;
-    opacity: .6;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.contact {
+    padding: 20px 0 80px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__fields {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 20px 0 10px 0;
+    row-gap: 10px;
+    
+}
+
+.contact__title {
+    font: normal 400 25px/30px 'Oxygen', serif;
+    display: block;
+    text-align: center;
+    color: #EFEFEF;
+    padding: 0 0 18px 0;
+}
+
+.contact__email {
+    background: #FFFFFF;
+    border-radius: 3px 0 0 3px;
+    padding: 0 35px;
+    width: 375px;
+    height: 50px;
+    border-style: none;
+}
+
+.contact__email::placeholder {
+    font: normal 400 12px/14px 'Roboto', serif;
+    color: #817F83;
+}
+
+.contact_button {
+    padding: 18px 43px 18px 44px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 0 3px 3px 0;
+    font: normal 400 12px/14px 'Roboto', serif;
+    color: #F8F8F8;
+    border-style: none;
+}
+
+a.footer__link{
+    text-decoration: none;
 }

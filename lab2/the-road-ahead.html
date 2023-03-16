@@ -10,20 +10,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oxygen:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="menu">
-                <p class="menu__p_name">Escape</p>
-                <nav class="menu__nav">
-                    <a class="menu__a" href="#">Home</a>
-                    <a class="menu__a" href="#">Categories</a>
-                    <a class="menu__a" href="#">About</a>
-                    <a class="menu__a" href="#">Contact</a>
+        <header class="header">
+            <div class="header__navbar">
+                <p class="header__title">Escape.</p>
+                <nav class="header__nav">
+                    <a class="header__link" href="#">Home</a>
+                    <a class="header__link" href="#">Categories</a>
+                    <a class="header__link" href="#">About</a>
+                    <a class="header__link" href="#">Contact</a>
                 </nav>
-                <h1 class="menu__h1">The Road Ahead</h1>
-                <p class="menu__p menu_p_text">The road ahead might be paved - it might not be.</p>
-            </div>
+            </div>   
         </header>
-        <img src = "img/posts/post7b.png" alt="#">
+        <div class="intro">
+            <h1 class="intro__title">The Road Ahead</h1>
+            <p class="intro__text">The road ahead might be paved - it might not be.</p>
+        </div>
+        <img class="post__image" src = "img/posts/post7b.png" alt="#">
         <div class="text">
             <p class="text__p">
                 Dark spruce forest frowned on either side the frozen waterway. 
@@ -65,14 +67,21 @@
                 puny adventurers bent on colossal adventure, pitting themselves against the might of a world as remote and alien and pulseless as the abysses of space.
             </p>
         </div>       
-        <footer>
-            <div class="footer">
-                <p class="footer__p">Escape</p>
+        <footer class="footer">
+            <form class="contact">
+                <span class="contact__title">Stay in Touch</span>
+                <div class="contact__fields">
+                    <input class="contact__email" id="email" type="email" placeholder="Enter your email address">
+                    <button class="contact_button" type="submit">Submit</button>
+                </div>
+            </form>
+            <div class="footer__navbar">
+                <span class="footer__title">Escape.</span>
                 <nav class="footer__nav">
-                    <a class="footer__a" href="#">Home</a>
-                    <a class="footer__a" href="#">Categories</a>
-                    <a class="footer__a" href="#">About</a>
-                    <a class="footer__a" href="#">Contact</a>
+                    <a class="footer__link" href="#">Home</a>
+                    <a class="footer__link" href="#">Categories</a>
+                    <a class="footer__link" href="#">About</a>
+                    <a class="footer__link" href="#">Contact</a>
                 </nav>
             </div>
         </footer>
