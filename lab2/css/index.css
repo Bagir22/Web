@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.header{
+.header {
     background: url("../img/header_background.png");
     border-radius: 0px;
     background-position: center;
@@ -20,6 +20,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
 }
 
 .header__title{
@@ -27,6 +28,7 @@
     font-weight: 400;
     font-size: 26px;
     line-height: 26px;
+    padding: 17px 0 17px 0;
 }
 
 .header__nav{
@@ -38,12 +40,13 @@
     text-transform: uppercase;
     display: flex;
     flex-flow: row nowrap;
+    gap: 20px;
 }
 
 a.header__link{
     color: #FFFFFF;
     text-decoration: none;
-    margin: 10px
+    padding: 17px 0 17px 0;
 }
 
 .intro{
@@ -76,6 +79,7 @@ a.header__link{
     font: normal 400 13px/20px 'Oxygen', serif;
     text-align: center;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .categories{
@@ -97,7 +101,7 @@ a.header__link{
 
 .menu__link {
     width: 139px;
-    font: normal 400 14px/20px 'Lora', serif;
+    font: 14px/20px 'Lora', serif;
     text-align: center;
     color: #768088;
     text-decoration: none;
@@ -130,6 +134,8 @@ a.header__link{
 .featured-posts__title {
     font: normal 400 20px/27px 'Oxygen', serif;
     color: #2E2E2E;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 0 26px 16px 26px;
 }
 
 .featured-post__title{
@@ -210,6 +216,8 @@ a.header__link{
 .most-recent__title{
     font: normal 400 20px/27px 'Oxygen', serif;
     color: #2E2E2E;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 0 13px 16px 13px;
 }
 
 .most-recent{
@@ -272,6 +280,7 @@ a.recent-item__title{
     display: flex;
     justify-content: space-between;
     padding: 12px 13px 0 13px;
+    border-top: 1px solid #EFEFEF;
 }
 
 .recent-item__author {
@@ -288,6 +297,10 @@ a.recent-item__title{
     border-radius: 60px;
 }
 
+.recent-item__author-name{
+    padding: 0 0 0 10px;
+}
+
 .recent-item__date {
     height: 35px;
     font-size: 12px;
@@ -298,7 +311,6 @@ a.recent-item__title{
 .footer {
     height: 378px;
     background: url("../img/footer_background.png");
-    background-repeat: no-repeat;
     background-size: cover;
     border-radius: 0;
     display: flex;
@@ -365,7 +377,8 @@ a.recent-item__title{
     display: block;
     text-align: center;
     color: #EFEFEF;
-    padding: 0 0 18px 0;
+    padding: 0 15px 18px 15px;
+    border-bottom: 1px solid #DEDEDE;
 }
 
 .contact__email {
@@ -391,6 +404,6 @@ a.recent-item__title{
     border-style: none;
 }
 
-a.footer__link{
+.footer__link{
     text-decoration: none;
 }
