@@ -310,7 +310,7 @@ a.recent-item__title{
 
 .footer {
     height: 378px;
-    background: url("../img/footer_background.png");
+    background: url("../img/footer_background.png"), no-repeat center;
     background-size: cover;
     border-radius: 0;
     display: flex;
