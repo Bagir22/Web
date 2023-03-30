@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"text/template"
 )
 
 type indexPage struct {
-	Title           string
 	FeaturedPosts   []featuredPostData
 	MostRecentPosts []mostRecentPostData
 }
@@ -20,6 +18,7 @@ type featuredPostData struct {
 	Author      string
 	AuthorImg   string
 	PublishDate string
+	Category    string
 }
 
 type mostRecentPostData struct {
@@ -40,12 +39,10 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 
 	data := indexPage{
-		Title:           "Escape",
 		FeaturedPosts:   featuredPosts(),
 		MostRecentPosts: mostRecentPosts(),
 	}
 
-	fmt.Println(data)
 	err = ts.Execute(w, data)
 	if err != nil {
 		http.Error(w, "Internal Server Error", 500)
@@ -93,6 +90,7 @@ func featuredPosts() []featuredPostData {
 			Author:      "William Wong",
 			AuthorImg:   "static/img/av/WilliamWong.png",
 			PublishDate: "September 25, 2015",
+			Category:    "Adevnture",
 		},
 	}
 }
@@ -102,7 +100,7 @@ func mostRecentPosts() []mostRecentPostData {
 		{
 			Title:       "Still Standing Tall",
 			Subtitle:    "Life begins at the end of your comfort zone.",
-			Image:       "static/img/posts/post1.png",
+			Image:       "static/img/posts/post1.jpg",
 			Author:      "William Wong",
 			AuthorImg:   "static/img/av/WilliamWong.png",
 			PublishDate: "9/25/2015",

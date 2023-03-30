@@ -12,7 +12,7 @@
     <body>
         <header class="header">
             <div class="header__navbar">
-                <p class="header__title">{{ .Title }}</p>
+                <p class="header__title">Escape.</p>
                 <nav class="header__nav">
                     <a class="header__link" href="#">Home</a>
                     <a class="header__link" href="#">Categories</a>
@@ -43,6 +43,9 @@
                     {{ range .FeaturedPosts }}
                     <div class="featured-post {{ .ImgModifier }}">
                         <div class="featured-post__container">
+                            {{ if .Category }}
+                            <button class="feature-post__category_button">Adventure</button>
+                            {{ end }}
                             <h3 class="featured-post__title">{{ .Title }}</h3>
                             <p class="featured-post__text">{{ .Subtitle }}</p>
                             <div class="featured-post__info">
@@ -57,7 +60,6 @@
                     {{ end }}
                 </div>     
             </div>        
-            
             <div class="most-recent">
                 <h2 class="most-recent__title" id="most-recent">Most Recent</h2>
                 <div class="most-recent__items">
@@ -79,8 +81,6 @@
                     {{ end}}
                 </div>           
             </div>
-        </section>
-        <footer class="footer">
             <form class="contact">
                 <span class="contact__title">Stay in Touch</span>
                 <div class="contact__fields">
@@ -88,6 +88,8 @@
                     <button class="contact_button" type="submit">Submit</button>
                 </div>
             </form>
+        </section>
+        <footer class="footer">
             <div class="footer__navbar">
                 <span class="footer__title">Escape.</span>
                 <nav class="footer__nav">

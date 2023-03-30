@@ -4,7 +4,7 @@
 }
 
 .header {
-    background: url("../img/header_background.png");
+    background: url("img/header_background.png");
     border-radius: 0px;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,11 +167,11 @@ a.header__link{
 }
 
 .featured-post_first {
-    background: url("../img/posts/theRoadAheadPost.png") no-repeat;
+    background: url("img/posts/theRoadAheadPost.png") no-repeat;
 }
 
 .featured-post_second {
-    background: url("../img/posts/fromTopDownPost.png") no-repeat;
+    background: url("img/posts/fromTopDownPost.png") no-repeat;
 }
 
 .featured-posts {
@@ -303,7 +303,7 @@ a.recent-item__title{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: url("../img/footer_background.png");
+    background: url("img/footer_background.png");
     background-size: cover;
     width: 100%;
 }
@@ -350,7 +350,7 @@ a.recent-item__title{
 }
 
 .footer {
-    background: url("../img/footer_background.png");
+    background: url("img/footer_background.png");
     background-size: cover;
     border-radius: 0;
     display: flex;
