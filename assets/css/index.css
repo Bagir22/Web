@@ -166,14 +166,6 @@ a.header__link{
     color: #FFFFFF;
 }
 
-.featured-post_first {
-    background: url("../img/posts/theRoadAheadPost.png") no-repeat;
-}
-
-.featured-post_second {
-    background: url("../img/posts/fromTopDownPost.png") no-repeat;
-}
-
 .featured-posts {
     padding-top: 60px;
     display: flex;

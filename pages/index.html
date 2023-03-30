@@ -41,11 +41,8 @@
                 <h2 class="featured-posts__title">Featured Posts</h2>
                 <div class="featured-posts__items">
                     {{ range .FeaturedPosts }}
-                    <div class="featured-post {{ .ImgModifier }}">
+                    <div class="featured-post" style="background: url('{{ .ImgModifier}}');">
                         <div class="featured-post__container">
-                            {{ if .Category }}
-                            <button class="feature-post__category_button">Adventure</button>
-                            {{ end }}
                             <h3 class="featured-post__title">{{ .Title }}</h3>
                             <p class="featured-post__text">{{ .Subtitle }}</p>
                             <div class="featured-post__info">
