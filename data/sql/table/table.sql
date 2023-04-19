@@ -1,6 +1,6 @@
 CREATE TABLE post
 (
-    `post_id`      INT NOT NULL AUTO_INCREMENT,
+    `post_id` INT NOT NULL AUTO_INCREMENT,
     `title` VARCHAR(255),
     `subtitle` VARCHAR(255),
     `author` VARCHAR(255),
