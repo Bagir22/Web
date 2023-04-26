@@ -8,6 +8,7 @@ import (
 	"os"
 
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
 	"github.com/joho/godotenv"
 )
@@ -25,10 +26,10 @@ func main() {
 
 	dbx := sqlx.NewDb(db, dbDriverName)
 
-	mux := http.NewServeMux()
+	mux := mux.NewRouter()
+	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./assets"))))
 	mux.HandleFunc("/home", index(dbx))
-	mux.HandleFunc("/post", post)
-	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./assets"))))
+	mux.HandleFunc("/post/{postID}", post(dbx))
 	fmt.Println("Start server")
 	err = http.ListenAndServe(port, mux)
 	if err != nil {

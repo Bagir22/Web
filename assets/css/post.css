@@ -54,17 +54,17 @@
     width: 100%;
 }
 
-.text {
+.post__content {
+    background: #F7F7F7;
+    border-radius: 0;
     padding: 140px 240px 135px 240px;
 }
-.text__p
-{
-    font-family: 'Oxygen', normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 35px;
+
+.post__text {
+    font: normal 400 24px/35px 'Oxygen', serif;
     color: #101315;
-    margin-bottom: 24px;
+    margin-bottom: 35px;
+    
 }
 
 .footer {

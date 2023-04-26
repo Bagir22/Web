@@ -129,6 +129,10 @@ a.header__link{
     border-radius: 3px;
 }
 
+.featured-post__title_link{
+    text-decoration: none;
+}
+
 .featured-post__title{
     font: normal 400 27px/40px 'Lora', serif;
     color: #FFFFFF;

@@ -43,7 +43,9 @@
                     {{ range .FeaturedPosts }}
                     <div class="featured-post" style="background: url('{{ .Image}}');">
                         <div class="featured-post__container">
-                            <h3 class="featured-post__title">{{ .Title }}</h3>
+                            <a href="{{ .PostURL }}" class="featured-post__title_link">
+                                <h3 class="featured-post__title">{{ .Title }}</h3>
+                            </a>
                             <p class="featured-post__text">{{ .Subtitle }}</p>
                             <div class="featured-post__info">
                                 <div class="featured-post__info-wrap">
@@ -64,7 +66,7 @@
                     <div class="recent-item">
                         <img src = "{{ .Image }}" class="recent-item__image" alt="#">
                         <div class="recent-item__main">
-                            <a class="recent-item__title" href="#">{{ .Title }}</a>
+                            <a class="recent-item__title" href="{{ .PostURL }}">{{ .Title }}</a>
                             <p class="recent-item__text">{{ .Subtitle }}</p>
                         </div>
                         <div class="recent-item__info">
