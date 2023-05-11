@@ -4,7 +4,7 @@
 }
 
 .header {
-    background: url("../img/header_background.png");
+    background: url("../img/backgrounds/header_background.png");
     border-radius: 0px;
     background-position: center;
     background-repeat: no-repeat;
@@ -299,7 +299,7 @@ a.recent-item__title{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: url("../img/footer_background.png");
+    background: url("../img/backgrounds/footer_background.png");
     background-size: cover;
     width: 100%;
 }
@@ -346,7 +346,7 @@ a.recent-item__title{
 }
 
 .footer {
-    background: url("../img/footer_background.png");
+    background: url("../img/backgrounds/footer_background.png");
     background-size: cover;
     border-radius: 0;
     display: flex;

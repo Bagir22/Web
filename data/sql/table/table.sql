@@ -6,8 +6,8 @@ CREATE TABLE post
     `author` VARCHAR(255) NOT NULL,
     `author_url` VARCHAR(255),
     `publish_date` VARCHAR(255) NOT NULL,
-    `image_url` VARCHAR(255),
-    `featured` TINYINT(1) DEFAULT 0,
+    `image_url` VARCHAR(255) NOT NULL,
+    `featured` TINYINT(1) DEFAULT 0 NOT NULL,
     `content` TEXT NOT NULL,
    PRIMARY KEY (`post_id`)
 ) ENGINE = InnoDB

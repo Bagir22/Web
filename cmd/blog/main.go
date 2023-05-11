@@ -30,6 +30,8 @@ func main() {
 	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./assets"))))
 	mux.HandleFunc("/home", index(dbx))
 	mux.HandleFunc("/post/{postID}", post(dbx))
+	mux.HandleFunc("/admin", admin)
+	mux.HandleFunc("/login", login)
 	fmt.Println("Start server")
 	err = http.ListenAndServe(port, mux)
 	if err != nil {

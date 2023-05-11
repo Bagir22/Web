@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("../img/backgrounds/logIn_background.png") no-repeat center;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 230px;
+    margin-right: 130px;
+    margin-top: 120px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo__text {
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.logIn__form {
+    width: 480px;
+    height: 560px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__title {
+    padding: 56px 0 0 40px;
+    font-family: 'Lora', normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.inputForm {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 40px 0 40px;
+}
+
+.form__text {
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7A7A7A;
+}
+
+.emailForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__email_inp {
+    height: 40px;
+}
+
+.passwordForm {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.form__password_inp {
+    height: 40px;
+    background: url("../img/icons/eye.png") no-repeat right center;
+}
+
+.form__password_icon {
+    width: 24px;
+    height: 24px;
+}
+
+.form__button {
+    margin-top: 40px;
+    height: 48px;
+    width: 93px;
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background-color: #DD783F;
+    border-style: none;
+    border-radius: 3px;
+}

@@ -110,9 +110,45 @@ func post(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
 			log.Println(err)
 			return
 		}
-		log.Println(post.Text)
+
 		log.Println("Request completed successfully")
 	}
+}
+
+func admin(w http.ResponseWriter, r *http.Request) {
+	ts, err := template.ParseFiles("./pages/admin.html")
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err)
+		return
+	}
+
+	err = ts.Execute(w, nil)
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err)
+		return
+	}
+
+	log.Println("Request completed successfuly")
+}
+
+func login(w http.ResponseWriter, r *http.Request) {
+	ts, err := template.ParseFiles("./pages/login.html")
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err)
+		return
+	}
+
+	err = ts.Execute(w, nil)
+	if err != nil {
+		http.Error(w, "Internal Server Error", 500)
+		log.Println(err)
+		return
+	}
+
+	log.Println("Request completed successfuly")
 }
 
 func postByID(db *sqlx.DB, id int) (Post, error) {
