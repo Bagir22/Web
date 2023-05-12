@@ -121,9 +121,13 @@ function handleSubmit(event) {
             formDataObj[key] = value;
         }
     });
-    console.log(formDataObj);
-    var json = JSON.stringify(formDataObj);
-    console.log(json);
+    if (formDataObj['title'] == "" || formDataObj['authorName'] == "" || formDataObj['content'] == "") {
+        alert("Не все поля введены")
+    } else {
+        console.log(formDataObj);
+        var json = JSON.stringify(formDataObj);
+        console.log(json);
+    }  
   }
 
 
