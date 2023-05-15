@@ -1,92 +1,17 @@
-function previewTitle(text) {
-    const previewArticle = document.getElementById('preview__article_title');
-    const previewPostCard = document.getElementById('preview__postCard_title');
+function previewText(text, article, postCard) {
+  const previewArticle = document.getElementById(article);
+  previewArticle.textContent = text.value;
 
-    previewArticle.textContent = text.value;
-    previewPostCard.textContent = text.value;
+  if (postCard) {
+      const previewPostCard = document.getElementById(postCard);
+      previewPostCard.textContent = text.value;
   }
-
-function previewDesc(text) {
-    const previewArticle = document.getElementById('preview__article_description');
-    const previewPostCard = document.getElementById('preview__postCard_description');
-
-    previewArticle.textContent = text.value;
-    previewPostCard.textContent = text.value;
-  }  
-
-function previewAuthorName(text) {
-    const authorName = document.getElementById('preview__postCard_authorName');
-
-    authorName.textContent = text.value;
-  }  
-
-function previewDate(date) {
-    const previewDate = document.getElementById('preview__postCard_date');
-
-    previewDate.textContent = date.value;
-  }   
-
-function previewHeroImgBig() {
-    const file = document.getElementById("input__heroImage_inp").files[0];
-    const img = document.getElementById('input__heroImage_img');
-    const preview = document.getElementById('preview__article_img');
-    const reader = new FileReader();
-  
-    reader.addEventListener(
-      "load",
-      () => {
-        // convert image file to base64 string
-        img.src = reader.result;
-        preview.src = reader.result;
-      },
-      false
-    );
-  
-    if (file) {
-      reader.readAsDataURL(file);
-      const img = document.createElement('img');
-      img.src = 'static/img/icons/trash.png';
-      img.style.marginTop = "12px";
-      img.style.width = "24px";
-      img.style.height = "24px";
-      const parentElem = document.getElementById('input__heroImgBig');;
-      parentElem.appendChild(img);
-    }
-  }
-
-function previewHeroImgSmall() {
-    const file = document.getElementById("input__heroImageSmall_inp").files[0];
-    const img = document.getElementById('input__heroImageSmall_img');
-    const preview = document.getElementById('preview__postCard_img');
-    const reader = new FileReader();
-  
-    reader.addEventListener(
-      "load",
-      () => {
-        // convert image file to base64 string
-        img.src = reader.result;
-        preview.src = reader.result;
-      },
-      false
-    );
-  
-    if (file) {
-      reader.readAsDataURL(file);
-      const img = document.createElement('img');
-      img.src = 'static/img/icons/trash.png';
-      img.style.marginTop = "-40px";
-      img.style.marginBottom = "56px";
-      img.style.width = "24px";
-      img.style.height = "24px";
-      const parentElem = document.getElementById('input__heroImgSmall');;
-      parentElem.appendChild(img);
-    }
-  }
+}
  
-function previewAuthorPhoto() {
-    const file = document.getElementById("input__authorPhoto_inp").files[0];
-    const img = document.getElementById('input__authorPhoto_img');
-    const preview = document.getElementById('preview__postCard_authorImg');
+function previewImg(fileElem, imgElem, previewElem) {
+    const file = document.getElementById(fileElem).files[0];
+    const img = document.getElementById(imgElem);
+    const preview = document.getElementById(previewElem);
     const reader = new FileReader();
   
     reader.addEventListener(
@@ -104,9 +29,24 @@ function previewAuthorPhoto() {
       reader.readAsDataURL(file);
       const img = document.createElement('img');
       img.src = 'static/img/icons/trash.png';
-      img.style.marginLeft = "16px";
-      const parentElem = document.getElementById('authorPhoto__upload');;
-      parentElem.appendChild(img);
+      if (fileElem == 'input__author-photo_inp') {
+          img.style.marginLeft = "16px";
+          const parentElem = document.getElementById('author-photo__upload');
+          parentElem.appendChild(img);
+      } else if (fileElem == 'input__hero-img-small_inp') {
+          img.style.marginTop = "-40px";
+          img.style.marginBottom = "56px";
+          img.style.width = "24px";
+          img.style.height = "24px";
+          const parentElem = document.getElementById('input__hero-img-small');
+          parentElem.appendChild(img);
+      } else {
+          img.style.marginTop = "12px";
+          img.style.width = "24px";
+          img.style.height = "24px";
+          const parentElem = document.getElementById('input__hero-img-big');
+          parentElem.appendChild(img);
+      }
     }
   }  
 
@@ -131,7 +71,7 @@ function handleSubmit(event) {
   }
 
 
-const formElem = document.getElementById("newPost");
+const formElem = document.getElementById("new-post");
 formElem.addEventListener('submit', handleSubmit);
   
 
