@@ -54,6 +54,8 @@
                                         onchange="previewImg('input__author-photo_inp', 'input__author-photo_img', 'preview__post-card_author-img')">
                                 <img src="static/img/icons/camera.png" id="input__author-photo_img">
                                 <span class="input__author-photo_upload">Upload</span>
+                                <img src="static/img/icons/trash.png" alt="#" id="input__author-photo_trash" 
+                                        onclick="removeImg('input__author-photo_trash', 'input__author-photo_img', 'preview__post-card_author-img')">
                             </div>        
                         </div>
                         <div class="input__date">
@@ -67,6 +69,8 @@
                                 onchange="previewImg('input__hero-image_inp', 'input__hero-image_img', 'preview__article_img')">
                             <img src="static/img/icons/FrameBig.png" id="input__hero-image_img">
                             <span class="input__upload-image_info">Size up 10mb. Format: png, jpeg, gif.</span>
+                            <img src="static/img/icons/trash.png" alt="#" id="input__hero-image_trash" 
+                                        onclick="removeImg('input__hero-image_trash', 'input__hero-image_img', 'preview__article_img')">
                         </div>
                         <div id="input__hero-img-small">
                             <span class="input__hero-img-small_heading">Hero Image</span>
@@ -74,6 +78,8 @@
                                 onchange="previewImg('input__hero-img-small_inp', 'input__hero-img-small_img', 'preview__post-card_img')">
                             <img src="static/img/icons/FrameSmall.png" id="input__hero-img-small_img">
                             <span class="input__upload-image-small_info">Size up 5mb. Format: png, jpeg, gif.</span>
+                            <img src="static/img/icons/trash.png" alt="#" id="input__hero-image-small_trash" 
+                                        onclick="removeImg('input__hero-image-small_trash', 'input__hero-img-small_img', 'preview__post-card_img')">
                         </div>                 
                     </div>
                     <div class="main__preview">

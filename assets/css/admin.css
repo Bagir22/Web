@@ -201,6 +201,27 @@ body {
     border-radius: 50%;
 }
 
+#input__author-photo_trash {
+    display: none;
+    margin-left: 16px;
+    width: 24px;
+    height: 24px;
+}
+
+#input__hero-image_trash {
+    display: none;
+    margin-top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+#input__hero-image-small_trash {
+    display: none;
+    margin: -40px 0 56px 0;
+    width: 24px;
+    height: 24px;
+}
+
 #input__date_form {
     height: 40px;
     width: 560px;
