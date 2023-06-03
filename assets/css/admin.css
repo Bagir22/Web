@@ -80,6 +80,7 @@ body {
     border-style: none;
     background-color: #DD783F;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .new-post__main {
@@ -206,6 +207,7 @@ body {
     margin-left: 16px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 #input__hero-image_trash {
@@ -213,6 +215,7 @@ body {
     margin-top: 12px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 #input__hero-image-small_trash {
@@ -220,6 +223,7 @@ body {
     margin: -40px 0 56px 0;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 #input__date_form {
@@ -422,7 +426,7 @@ body {
     padding-top: 40px;
 }
 
-.input__post-content_form {
+#input__post-content_form {
     width: 940px;
     height: 160px;
     background: #FFFFFF;

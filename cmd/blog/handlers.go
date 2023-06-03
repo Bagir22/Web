@@ -2,9 +2,14 @@ package main
 
 import (
 	"database/sql"
+	"encoding/base64"
+	"encoding/json"
 	"fmt"
+	"io"
 	"log"
 	"net/http"
+	"os"
+	"regexp"
 	"strconv"
 	"text/template"
 
@@ -34,6 +39,18 @@ type Post struct {
 	Subtitle string `db:"subtitle"`
 	Image    string `db:"image_url"`
 	Text     string `db:"content"`
+}
+
+type CreatePost struct {
+	Title           string `json:"title"`
+	Desc            string `json:"desc"`
+	AuthorName      string `json:"authorName"`
+	AuthorPhotoName string `json:"authorPhotoName"`
+	AuthorPhotoVal  string `json:"authorPhotoVal"`
+	Date            string `json:"date"`
+	HeroImgBigName  string `json:"heroImgName"`
+	HeroImgBigVal   string `json:"heroImgVal"`
+	Content string `json:"content"`
 }
 
 func index(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
@@ -131,6 +148,94 @@ func admin(w http.ResponseWriter, r *http.Request) {
 	}
 
 	log.Println("Request completed successfuly")
+}
+
+func createPost(db *sqlx.DB) func(w http.ResponseWriter, r *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+
+		w.Header().Set("Content-Type", "application/json")
+
+		reqData, err := io.ReadAll(r.Body)
+		if err != nil {
+			log.Println("# ", err)
+		}
+
+		var req CreatePost
+
+		err = json.Unmarshal(reqData, &req)
+		if err != nil {
+			log.Println("$ ", err)
+		}
+
+		saveImage(formatBase64String(req.AuthorPhotoVal), "assets/img/av/" + req.AuthorPhotoName)
+		saveImage(formatBase64String(req.HeroImgBigVal), "assets/img/posts/" + req.HeroImgBigName)
+
+		err = savePost(db, req)
+
+		if err != nil {
+			http.Error(w, "Internal Server Error", 500)
+			log.Println(err)
+			return
+		}
+
+		w.WriteHeader(http.StatusCreated)
+		log.Println("Request completed successfully")
+	}
+}
+
+func formatBase64String(value string) string {
+	regex := regexp.MustCompile("^.+,")
+	return regex.ReplaceAllString(value, "")
+}
+
+func savePost(db *sqlx.DB, req CreatePost) error {
+	const query = `
+		INSERT INTO 
+				post 
+		(
+			title, 
+			subtitle, 
+			author, 
+			author_url, 
+			publish_date,
+			image_url,
+			content
+		) 
+		VALUES 
+		(
+			?, 
+			?, 
+			?, 
+			?,
+			?,
+			?,
+			?
+		)
+	`
+	_, err := db.Exec(query, req.Title, req.Desc, req.AuthorName,
+		"static/img/av/"+req.AuthorPhotoName, req.Date, "static/img/posts/"+req.HeroImgBigName, req.Content)
+
+	if err != nil {
+		log.Println("Insert into db error:")
+		log.Println(err)
+	}
+
+
+
+	return err
+}
+
+func saveImage(image string, name string) error {
+	img, err := base64.StdEncoding.DecodeString(image)
+	file, err := os.Create(name)
+	_, err = file.Write(img) 
+
+	if err != nil {
+		log.Println("Image not saved:")
+		log.Println(err)
+	}
+
+	return err
 }
 
 func login(w http.ResponseWriter, r *http.Request) {

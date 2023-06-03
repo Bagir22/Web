@@ -78,12 +78,12 @@ body {
 
 .form__password_inp {
     height: 40px;
-    background: url("../img/icons/eye.png") no-repeat right center;
 }
 
-.form__password_icon {
+.form__password_eye {
     width: 24px;
     height: 24px;
+    margin-bottom: -20px;
 }
 
 .form__button {

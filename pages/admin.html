@@ -33,53 +33,42 @@
                     <div class="main__input">
                         <div class="input__title">
                             <span class="input__title_heading">Title</span>
-                            <input name="title" type="text" id="input__title_form" 
-                                oninput="previewText(this, 'preview__article_title', 'preview__post-card_title')">
+                            <input class="input__text-field" name="title" type="text" id="input__title_form">
                         </div>
                         <div class="input__desc">
                             <span class="input__desc_heading">Short description</span>
-                            <input name="desc" type="text" id="input__desc_form" 
-                                oninput="previewText(this, 'preview__article_description', 'preview__post-card_description')">
-                            
+                            <input class="input__text-field" name="desc" type="text" id="input__desc_form">                            
                         </div>
                         <div class="input__author-name">
                             <span class="input__desc_heading">Author name</span>
-                            <input name="authorName" type="text" id="input__author-name_form" 
-                                oninput="previewText(this, 'preview__post-card_author-name')">
+                            <input class="input__text-field" name="authorName" type="text" id="input__author-name_form">
                         </div>
                         <div class="input__author-photo">
                             <span class="input__author-photo_heading">Author Photo</span>
-                            <div id="author-photo__upload">
-                                <input name="authorPhoto" type="file" id="input__author-photo_inp" accept=".jpg, .jpeg, .png" 
-                                        onchange="previewImg('input__author-photo_inp', 'input__author-photo_img', 'preview__post-card_author-img')">
+                            <div id="author-photo__upload" class="form-file-field">
+                                <input class="input__file-field" name="authorPhoto" type="file" id="input__author-photo_inp" accept=".jpg, .jpeg, .png">
                                 <img src="static/img/icons/camera.png" id="input__author-photo_img">
                                 <span class="input__author-photo_upload">Upload</span>
-                                <img src="static/img/icons/trash.png" alt="#" id="input__author-photo_trash" 
-                                        onclick="removeImg('input__author-photo_trash', 'input__author-photo_img', 'preview__post-card_author-img')">
+                                <img class="form-file-field__trash" src="static/img/icons/trash.png" alt="#" id="input__author-photo_trash">
                             </div>        
                         </div>
                         <div class="input__date">
                             <span class="input__date_heading">Publish Date</span>
-                            <input name="date" type="date" id="input__date_form" value="2023-04-18" 
-                                onchange="previewText(this, 'preview__post-card_date')">
+                            <input class="input__text-field" name="date" type="date" id="input__date_form" value="2023-04-18">
                         </div>
-                        <div id="input__hero-img-big">
+                        <div id="input__hero-img-big" class="form-file-field">
                             <span class="input__hero-img_heading">Hero Image</span>
-                            <input name="heroImgBig" type="file" id="input__hero-image_inp" alt="" accept=".jpg, .jpeg, .png" 
-                                onchange="previewImg('input__hero-image_inp', 'input__hero-image_img', 'preview__article_img')">
+                            <input class="input__file-field" name="heroImgBig" type="file" id="input__hero-image_inp" alt="" accept=".jpg, .jpeg, .png">
                             <img src="static/img/icons/FrameBig.png" id="input__hero-image_img">
                             <span class="input__upload-image_info">Size up 10mb. Format: png, jpeg, gif.</span>
-                            <img src="static/img/icons/trash.png" alt="#" id="input__hero-image_trash" 
-                                        onclick="removeImg('input__hero-image_trash', 'input__hero-image_img', 'preview__article_img')">
+                            <img class="form-file-field__trash" src="static/img/icons/trash.png" alt="#" id="input__hero-image_trash">
                         </div>
-                        <div id="input__hero-img-small">
+                        <div id="input__hero-img-small" class="form-file-field">
                             <span class="input__hero-img-small_heading">Hero Image</span>
-                            <input name="heroImgSmall" type="file" id="input__hero-img-small_inp" alt="" accept=".jpg, .jpeg, .png" 
-                                onchange="previewImg('input__hero-img-small_inp', 'input__hero-img-small_img', 'preview__post-card_img')">
-                            <img src="static/img/icons/FrameSmall.png" id="input__hero-img-small_img">
+                            <input class="input__file-field" name="heroImgSmall" type="file" id="input__hero-img-small_inp" alt="" accept=".jpg, .jpeg, .png">
+                            <img class="form-file-field_image" src="static/img/icons/FrameSmall.png" id="input__hero-img-small_img">
                             <span class="input__upload-image-small_info">Size up 5mb. Format: png, jpeg, gif.</span>
-                            <img src="static/img/icons/trash.png" alt="#" id="input__hero-image-small_trash" 
-                                        onclick="removeImg('input__hero-image-small_trash', 'input__hero-img-small_img', 'preview__post-card_img')">
+                            <img class="form-file-field__trash" src="static/img/icons/trash.png" alt="#" id="input__hero-image-small_trash">
                         </div>                 
                     </div>
                     <div class="main__preview">
@@ -116,7 +105,7 @@
                 <h3 class="content__title">Content</h3>
                 <div class="content__form">
                     <span class="input__post-content_heading">Post contnet (plain text)</span>
-                    <input name="content" type="text" class="input__post-content_form" placeholder="Type anything you want...">
+                    <input class="input__text-field" name="content" type="text" id="input__post-content_form" placeholder="Type anything you want...">
                 </div>
             </div>
         </form> 

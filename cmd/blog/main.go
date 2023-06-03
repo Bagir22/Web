@@ -30,7 +30,8 @@ func main() {
 	mux.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./assets"))))
 	mux.HandleFunc("/home", index(dbx))
 	mux.HandleFunc("/post/{postID}", post(dbx))
-	mux.HandleFunc("/admin", admin)
+	mux.HandleFunc("/admin", admin).Methods(http.MethodPost, http.MethodGet)
+	mux.HandleFunc("/api/post", createPost(dbx)).Methods(http.MethodPost)
 	mux.HandleFunc("/login", login)
 	fmt.Println("Start server")
 	err = http.ListenAndServe(port, mux)
@@ -40,7 +41,7 @@ func main() {
 }
 
 func openDB() (*sql.DB, error) {
-	return sql.Open(dbDriverName, fmt.Sprintf("root:%s@tcp(localhost:3306)/blog?charset=utf8mb4&collation=utf8mb4_unicode_ci&parseTime=true", goDotEnvVariable("MySqlPwd")))
+	return sql.Open(dbDriverName, fmt.Sprintf("root:%s@tcp(localhost:3306)/blog2?charset=utf8mb4&collation=utf8mb4_unicode_ci&parseTime=true", goDotEnvVariable("MySqlPwd")))
 }
 
 func goDotEnvVariable(key string) string {
