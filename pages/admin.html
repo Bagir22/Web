@@ -27,6 +27,16 @@
                 </div>
                 <input type="submit" id="publish_btn" value="Publish">           
             </div>
+            <div class="new-post__anim">
+                <div id="anim__success">
+                    <img src="static/img/icons/success.png">
+                    <span id="anim__succes_text">Publish Complete</span>                    
+                </div>
+                <div id="anim__error">
+                    <img src="static/img/icons/error.png">
+                    <span id="anim__success_text">Whoops! Some fields need your attention :o</span>
+                </div>
+            </div>
             <div class="new-post__main">
                 <h3 class="main__info">Main Information</h3>
                 <div class="main__content">
@@ -34,14 +44,17 @@
                         <div class="input__title">
                             <span class="input__title_heading">Title</span>
                             <input class="input__text-field" name="title" type="text" id="input__title_form">
+                            <span class="error" id="input__title_error">Title is required</span>
                         </div>
                         <div class="input__desc">
                             <span class="input__desc_heading">Short description</span>
-                            <input class="input__text-field" name="desc" type="text" id="input__desc_form">                            
+                            <input class="input__text-field" name="desc" type="text" id="input__desc_form">
+                            <span class="error" id="input__desc_error">Description is required</span>                            
                         </div>
                         <div class="input__author-name">
                             <span class="input__desc_heading">Author name</span>
                             <input class="input__text-field" name="authorName" type="text" id="input__author-name_form">
+                            <span class="error" id="input__author-name_error">Author name is required</span>
                         </div>
                         <div class="input__author-photo">
                             <span class="input__author-photo_heading">Author Photo</span>
@@ -106,6 +119,7 @@
                 <div class="content__form">
                     <span class="input__post-content_heading">Post contnet (plain text)</span>
                     <input class="input__text-field" name="content" type="text" id="input__post-content_form" placeholder="Type anything you want...">
+                    <span class="error" id="input__content_error">Content is required</span>
                 </div>
             </div>
         </form> 

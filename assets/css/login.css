@@ -29,7 +29,7 @@ body {
     color: #FFFFFF;
 }
 
-.logIn__form {
+#logIn__form {
     width: 480px;
     height: 560px;
     background-color: #FFFFFF;
@@ -66,7 +66,7 @@ body {
     flex-direction: column;
 }
 
-.form__email_inp {
+#form__email_inp {
     height: 40px;
 }
 
@@ -76,17 +76,20 @@ body {
     padding-top: 40px;
 }
 
-.form__password_inp {
+#form__password_inp {
     height: 40px;
 }
 
-.form__password_eye {
+#form__password_eye {
     width: 24px;
     height: 24px;
-    margin-bottom: -20px;
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 360px;
+    z-index: 2;
 }
 
-.form__button {
+#form__button {
     margin-top: 40px;
     height: 48px;
     width: 93px;
@@ -98,4 +101,80 @@ body {
     background-color: #DD783F;
     border-style: none;
     border-radius: 3px;
+}
+
+#input__email_error, #input__pwd_error {
+    display: none;
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #E86961;
+}
+
+.anim__error, .anim_success {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+    height: 44px;
+    margin: 11px 0 10px 0;
+    font-family: 'Oxygen', normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #2E2E2E;
+}
+
+.anim__error {
+    background-color: #FFEBEA;
+    animation-name: error;
+    animation-duration: 3000ms;
+    animation-iteration-count: 1;
+    display: none;
+}
+
+.anim__success {
+    display: none;
+    background-color: #E6FCEF;
+    animation-name: success;
+    animation-duration: 3000ms;
+    animation-iteration-count: 1;
+}
+
+
+#anim__erroe_text, #anim__erroe_text {
+    padding-left: 10px;
+}
+
+@keyframes error
+{
+    from 
+    {
+       height: 0;
+    }
+    50% 
+    {
+        height: 44px;
+    }
+    to 
+    {
+        height: 0;
+    }
+}
+
+@keyframes success
+{
+    from 
+    {
+       height: 0;
+    }
+    50% 
+    {
+        height: 44px;
+    }
+    to 
+    {
+        height: 0;
+    }
 }

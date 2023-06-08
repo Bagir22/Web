@@ -168,35 +168,44 @@ window.onload = () => {
     button.addEventListener('submit', async e => {
         try {
             e.preventDefault();
-            const data = {
-                title: fields.inputs.title.value,
-                desc: fields.inputs.description.value,
-                authorName: fields.inputs.authorName.value,
-                authorPhotoName: fields.inputs.authorPhoto.files[0].name,
-                authorPhotoVal: await toBase64(fields.inputs.authorPhoto.files[0]),        
-                date: fields.inputs.date.value,
-                heroImgName: fields.inputs.heroImgBig.files[0].name,
-                heroImgVal: await toBase64(fields.inputs.heroImgBig.files[0]),
-                content: fields.inputs.content.value
-            }
-            console.log(data)
-            console.log(await JSON.stringify(data));
-            const postData = async (url = '', data = {}) => {
-                const response = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                console.log(response)
-                return response;
-            }
-            const response = postData('/api/post', data)
-            if (response.status === 201) {
-                console.log("Post added")
-            } else {
-                console.log("Post not adeed")
+            if (checkErrors()) {
+                const data = {
+                    title: fields.inputs.title.value,
+                    desc: fields.inputs.description.value,
+                    authorName: fields.inputs.authorName.value,
+                    authorPhotoName: fields.inputs.authorPhoto.files[0].name,
+                    authorPhotoVal: await toBase64(fields.inputs.authorPhoto.files[0]),        
+                    date: fields.inputs.date.value,
+                    heroImgName: fields.inputs.heroImgBig.files[0].name,
+                    heroImgVal: await toBase64(fields.inputs.heroImgBig.files[0]),
+                    content: fields.inputs.content.value
+                }
+                console.log(data)
+                console.log(await JSON.stringify(data));
+
+                anim = document.getElementById('anim__success');
+                anim.style.display = 'block';
+                setTimeout(function() {
+                    anim.style.display = 'none';
+                }, 3000);
+
+                const postData = async (url = '', data = {}) => {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    });
+                    console.log(response)
+                    return response;
+                }
+                const response = postData('/api/post', data)
+                if (response.status === 201) {
+                    console.log("Post added")
+                } else {
+                    console.log("Post not adeed")
+                }
             }
         } catch (e) {
             console.log('JSON Error');
@@ -216,5 +225,52 @@ window.onload = () => {
         reader.onerror = reject;
     });
 
+    function checkErrors() {
+        Check = true
+        if (fields.inputs.title.value == "") {
+            anim = document.getElementById('anim__error');
+            text = document.getElementById('input__title_error');
+            anim.style.display = 'block';
+            text.style.display = 'block';
+            setTimeout(function() {
+                anim.style.display = 'none';
+                text.style.display = 'none';
+            }, 3000);
+            Check = false;
+        }
+        if (fields.inputs.description.value == "") {
+            anim = document.getElementById('anim__error');
+            text = document.getElementById('input__desc_error');
+            anim.style.display = 'block';
+            text.style.display = 'block';
+            setTimeout(function() {
+                anim.style.display = 'none';
+                text.style.display = 'none';
+            }, 3000);
+            Check = false;
+        }
+        if (fields.inputs.authorName.value == "") {
+            anim = document.getElementById('anim__error');
+            text = document.getElementById('input__author-name_error');
+            anim.style.display = 'block';
+            text.style.display = 'block';
+            setTimeout(function() {
+                anim.style.display = 'none';
+                text.style.display = 'none';
+            }, 3000);
+            Check = false;
+        }
+        if (fields.inputs.content.value == "") { 
+            anim = document.getElementById('anim__error');
+            text = document.getElementById('input__content_error');
+            anim.style.display = 'block';
+            text.style.display = 'block';
+            setTimeout(function() {
+                anim.style.display = 'none';
+                text.style.display = 'none';
+            }, 3000);
+            Check = false;
+        }
+        return Check
+    }
 }
-

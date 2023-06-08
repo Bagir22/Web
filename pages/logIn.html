@@ -15,24 +15,38 @@
                 <img src="/static/img/logo/LogoInversed.png" alt="#" class="logo__icon">
                 <span class="logo__text">Log in to start creating</span>
             </div>        
-            <section class="logIn__form">
-                <span class="form__title">Log In</span>
+            <form id="logIn__form" enctype='application/json'>
+                <span class="form__title">Log In</span> 
                 <div class="inputForm">
+                    <div class="anim__error" id="anim__check_error">
+                        <img src="static/img/icons/error.png" class="anim_img">
+                        <span id="anim__error_text">A-Ah! Check all fields</span>
+                    </div>
+                    <div class="anim__error" id="anim__incorrect_error">
+                        <img src="static/img/icons/error.png" class="anim_img">
+                        <span id="anim__error_text">Email or password is incorrect.</span>
+                    </div>
+                    <div class="anim__success" id="anim__success_LogIn">
+                        <img src="static/img/icons/success.png" class="anim_img">
+                        <span id="anim__succes_text">Login successed</span>
+                    </div>
                     <div class="emailForm">
                         <span class="form__text">Email</span>
-                        <input type="email" class="form__email_inp">
+                        <input type="email" id="form__email_inp">
+                        <span class="error" id="input__email_error">Email is required</span>   
                     </div>   
                     <div class="passwordForm">
                         <span class="form__text">Password</span>
-                        <input type="password" class="form__password_inp">
-                        <img src="static/img/icons/eye.png" alt="" class="form__password_eye">
+                        <input type="password" id="form__password_inp">
+                        <img src="static/img/icons/eye.png" alt="" id="form__password_eye">
+                        <span class="error" id="input__pwd_error">Password is required</span>  
                     </div>                        
-                    <button class="form__button">
+                    <button id="form__button">
                         Log In
                     </button>
                 </div>            
-            </section>
+            </form>
         </div>
-        <script src="static/js/admin.js"></script>
+        <script src="static/js/login.js"></script>
     </body>
 </html>
